@@ -1,6 +1,6 @@
 # Beer App 
 
-Beers es una app implementada con Swift & SwiftUI.
+Beers es una app implementada con **Swift** & **SwiftUI**.
 
 <p>
    <a href="https://developer.apple.com/swift/">
