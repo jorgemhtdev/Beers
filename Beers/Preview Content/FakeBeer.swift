@@ -7,12 +7,15 @@
 
 import Foundation
 
-let beerData: [BeerUI] = [
+private let beerData: [BeerUI] = [
     BeerUI(id: 1, name: "#", description: "#", imageUrl: "#")
 ]
 
 extension MainVM {
-    func LoadData() {
-        self.beers = beerData
-    }
+    static let loadList: MainVM = {
+        let viewModel = MainVM()
+        viewModel.beers = beerData
+
+        return viewModel
+    }()
 }

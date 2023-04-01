@@ -9,42 +9,19 @@ import SwiftUI
 
 struct MainView: View {
 
-    // Opción sin instanciar la view model desde la view
     @StateObject var viewModel: MainVM
 
-    // Opción instanciar view model desde la view y con un constructor para la preview
-    // @StateObject var viewModel = MainVM()
-    //  init(forPreview: Bool = false) {
-    //      guard forPreview else { return }
-    //      let viewModel = MainVM()
-    //      viewModel.beers = beerData
-    //      _viewModel = StateObject(wrappedValue: viewModel)
-    // }
-
-    // Con un constructor para la preview y una extensión de la view model para cargar datos
-    // #if DEBUG
-    // init(forPreview: Bool = false) {
-    //   self.viewModel.LoadData()
-    // }
-    // #endif
-
-    // Un merge de ambas opciones, opción sin instanciar view model desde la view pero dentro de un constructor para debug y opción para instanciar viewmodel desde la view
-
-    //#if DEBUG
-    //    let viewModel: MainVM
-    //    init() {
-    //        self.viewModel = MainVM(debugBeers: beerData)
-    //    }
-    //#else
-    //    @StateObject var viewModel = MainVM()
-    //#endif
-
     @State var showSheet: Bool = false
+
+    init(viewModel: MainVM = MainVM()) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
 
     var body: some View {
 
         NavigationStack {
             VStack {
+
                 List(viewModel.beers) { beer in
                     NavigationLink(beer.name) {
                         Text(beer.name)
@@ -62,31 +39,51 @@ struct MainView: View {
             }
             .padding()
             .sheet(isPresented: $showSheet) {
-                Text("Novedades de SwiftUI")
+                Text("Random Beer")
             }
+            .navigationTitle("Beers")
+            .navigationBarTitleDisplayMode(.large)
+            .navigationBarBackButtonHidden(true)
         }
+
     }
 
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = MainVM()
-        MainView(viewModel: viewModel)
-            .onAppear {
-                viewModel.beers = beerData
-            }
-        //ContentView(forPreview: true)
-        //ContentView()
+        MainView(viewModel: .loadList)
     }
 }
 
-//#if DEBUG
-//extension ContentViewModel {
-//    convenience init(debugBeers: [BeerUI]) {
-//        self.init()
-//        self.beers = beers
-//    }
-//}
-//#endif
 
+
+// @StateObject var viewModel: MainVM
+
+// @StateObject var viewModel = MainVM()
+//  init(forPreview: Bool = false) {
+//      guard forPreview else { return }
+//      let viewModel = MainVM()
+//      viewModel.beers = beerData
+//      _viewModel = StateObject(wrappedValue: viewModel)
+// }
+
+// #if DEBUG
+// init(forPreview: Bool = false) {
+//   self.viewModel.LoadData()
+// }
+// #endif
+
+
+//    #if DEBUG
+//        let viewModel: MainVM
+//        init() {
+//            self.viewModel = MainVM()
+//        }
+//    #else
+//        @StateObject var viewModel = MainVM()
+//    #endif
+
+// MainView()
+// ContentView(forPreview: true)
+// ContentView()
