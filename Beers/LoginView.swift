@@ -19,29 +19,52 @@ struct LoginView: View {
 
     var body: some View {
         NavigationStack {
-            VStack {
-                Text("Login")
-                    .font(.largeTitle)
-                    .bold()
-                    .padding()
+            VStack(spacing: 30) {
+
+                Image(systemName: "wineglass")
+                    .font(.system(size: 120))
+                    .padding(.vertical)
+                    .foregroundColor(Color.orangeXA)
+
+                Spacer()
+
+                VStack(alignment: .leading, spacing: 15) {
+                    Text("Username")
+                        .font(.body.bold())
+
+                    TextField("Username", text: $username)
+                        .padding()
+                        .textFieldBordered()
+                        .font(.body)
+
+                }
+                .padding(.horizontal)
+
+                VStack(alignment: .leading, spacing: 15) {
+                    Text("Password")
+                        .font(.body.bold())
+
+                    SecureField("Password", text: $password)
+                        .padding()
+                        .textFieldBordered()
+                        .font(.body)
+                }
+                .padding(.horizontal)
+
+                Spacer()
                 
-                TextField("Username", text: $username)
-                    .padding()
-                
-                SecureField("Password", text: $password)
-                    .padding()
-                
-                Button(action: {
-                    isLoggedIn = true
-                }, label: {
-                    Text("Login")
-                })
+                Button {
+
+                } label: {
+                    Text("Sign In")
+                }
+                .buttonStyle(MainButtonStyle())
             }
             .navigationDestination(
                 isPresented: $isLoggedIn) {
                     MainView()
                 }
-            .padding()
+                .padding()
         }
     }
 }
