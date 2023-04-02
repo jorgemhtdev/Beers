@@ -31,7 +31,7 @@
 		8E50074329D97C970061B8E1 /* RandomBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50074229D97C970061B8E1 /* RandomBeerView.swift */; };
 		8E50074629D980D70061B8E1 /* BeerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50074529D980D70061B8E1 /* BeerDetailView.swift */; };
 		8E50074829D9912B0061B8E1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E50074729D9912B0061B8E1 /* Colors.xcassets */; };
-		8E50074C29D998C60061B8E1 /* MainButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50074B29D998C60061B8E1 /* MainButton+Extensions.swift */; };
+		8E50074C29D998C60061B8E1 /* MainButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50074B29D998C60061B8E1 /* MainButton+Style.swift */; };
 		8E50074E29D998EB0061B8E1 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50074D29D998EB0061B8E1 /* View+Extensions.swift */; };
 		8E50075029D999620061B8E1 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50074F29D999620061B8E1 /* Color+Extensions.swift */; };
 		8E59ACDF29D5FED700B39AC5 /* BeersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59ACDE29D5FED700B39AC5 /* BeersApp.swift */; };
@@ -66,7 +66,7 @@
 		8E50074229D97C970061B8E1 /* RandomBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerView.swift; sourceTree = "<group>"; };
 		8E50074529D980D70061B8E1 /* BeerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailView.swift; sourceTree = "<group>"; };
 		8E50074729D9912B0061B8E1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		8E50074B29D998C60061B8E1 /* MainButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainButton+Extensions.swift"; sourceTree = "<group>"; };
+		8E50074B29D998C60061B8E1 /* MainButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainButton+Style.swift"; sourceTree = "<group>"; };
 		8E50074D29D998EB0061B8E1 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		8E50074F29D999620061B8E1 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		8E59ACDB29D5FED700B39AC5 /* Beers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,7 +165,7 @@
 		8E50074A29D998B30061B8E1 /* Btn */ = {
 			isa = PBXGroup;
 			children = (
-				8E50074B29D998C60061B8E1 /* MainButton+Extensions.swift */,
+				8E50074B29D998C60061B8E1 /* MainButton+Style.swift */,
 			);
 			name = Btn;
 			sourceTree = "<group>";
@@ -337,7 +337,7 @@
 				8EE34BE829D9E25D0063FD11 /* BeerShape+Shape.swift in Sources */,
 				8E50073E29D9734E0061B8E1 /* NetworkService.swift in Sources */,
 				8E59ACE129D5FED700B39AC5 /* MainView.swift in Sources */,
-				8E50074C29D998C60061B8E1 /* MainButton+Extensions.swift in Sources */,
+				8E50074C29D998C60061B8E1 /* MainButton+Style.swift in Sources */,
 				8E50073C29D825AD0061B8E1 /* Read.swift in Sources */,
 				8E50072629D74E670061B8E1 /* Amount.swift in Sources */,
 				8E50071229D74E060061B8E1 /* Beer.swift in Sources */,
