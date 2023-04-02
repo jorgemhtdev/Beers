@@ -28,4 +28,14 @@ extension MainVM {
     }()
 }
 
-let BeerDetailFake = BeerDetailUI(name: "AB:07", description: "Whisky cask-aged imperial scotch ale. Beer perfect for when the rain is coming sideways. Liquorice, plum and raisin temper the warming alcohol, producing a beer capable of holding back the Scottish chill.", imageUrl: "https://images.punkapi.com/v2/9.png")
+let BeerDetailFake = BeerDetailUI(
+    name: "Buzz",
+    tagline: "A Real Bitter Experience.",
+    firstBrewed: "09/2007",
+    description: "A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.",
+    imageURL: "https://images.punkapi.com/v2/keg.png",
+    brewersTips: "The earthy and floral aromas from the hops can be overpowering. Drop a little Cascade in at the end of the boil to lift the profile with a bit of citrus.", food: "Spicy carne asada with a pico de gallo sauce, Shredded chicken tacos with a mango chilli lime salsa, Cheesecake with a passion fruit swirl sauce",
+    abv: 4.5,
+    ibu: 60,
+    srm: 10
+)

@@ -22,9 +22,7 @@ struct MainView: View {
         NavigationStack {
             VStack {
                 List(viewModel.beers) { beer in
-                    NavigationLink(beer.name) {
-                        Text(beer.name)
-                    }
+                    NavigationLink(beer.name, value: beer)
                 }
 
                 Button(action: {
@@ -46,11 +44,15 @@ struct MainView: View {
             }
             .navigationTitle("My Favorite Beer")
             .navigationDestination(for: BeerUI.self) { beer in
-                Text(beer.name)
+                DetailBeerView(id: beer.id)
             }
             .padding()
             .sheet(isPresented: $showSheet) {
                 RandomBeerView()
+                    .presentationDetents([.medium, .large])
+//                    .presentationCornerRadius(60)
+//                    .presentationBackgroundInteraction(.enabled)
+
             }
             .navigationTitle("Beers")
             .navigationBarTitleDisplayMode(.large)

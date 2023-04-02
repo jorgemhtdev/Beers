@@ -63,17 +63,16 @@ struct LoginView: View {
                 Spacer()
 
                 Button {
-
+                    isLoggedIn.toggle()
                 } label: {
                     Text("Sign In")
                 }
                 .buttonStyle(MainButtonStyle())
             }
-            .navigationDestination(
-                isPresented: $isLoggedIn) {
-                    MainView()
-                }
-                .padding()
+            .navigationDestination(isPresented: $isLoggedIn) {
+                Text("Login Success")
+            }
+            .padding()
         }
     }
 }

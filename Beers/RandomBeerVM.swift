@@ -8,7 +8,18 @@
 import Foundation
 
 public class RandomBeerVM : ObservableObject {
-    @Published var beer:BeerDetailUI = BeerDetailUI(name: "", description: "", imageUrl: "")
+    @Published var beer:BeerDetailUI = BeerDetailUI(
+        name: "",
+        tagline: "",
+        firstBrewed: "",
+        description: "",
+        imageURL: "",
+        brewersTips: "",
+        food: "",
+        abv: 0,
+        ibu: 0,
+        srm: 0
+    )
 
     func fetchData() {
         get(url: EndPoint.random, type: [Beer].self, onSuccess: { data in

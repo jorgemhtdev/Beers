@@ -17,13 +17,13 @@ struct Beer: Decodable {
     let tagline: String
     let firstBrewed: String
     let description: String
-    let imageURL: String
-    let abv: Double
-    let ibu: Double?
+    let imageURL: String?
+    let abv: Double // porcentaje de alcohol tiene la cerveza por volumen
+    let ibu: Double? // el grado de amargor
     let targetFg: Double
     let targetOg: Double
     let ebc: Double?
-    let srm: Double?
+    let srm: Double? // el color de la cerveza
     let ph: Double?
     let attenuationLevel: Double
     let volume: Volume
@@ -31,7 +31,7 @@ struct Beer: Decodable {
     let method: Method
     let ingredients: Ingredients
     let foodPairing: [String]
-    let brewersTips: String?
+    let brewersTips: String
     let contributedBy: String
 
     // La mayoría de veces cuando llamamos a un endpoint la key del JSON no coincide con el nombre de la propiedad de nuestro objeto de dominio. Al implementar CodingKeys hacemos ese mapeo del JSON al nombre de la propiedad.
@@ -58,17 +58,35 @@ struct BeerUI : Hashable, Identifiable {
 
 struct BeerDetailUI {
     let name: String
+    let tagline:String
+    let firstBrewed:String
     let description: String
-    let imageUrl: String
+    let imageURL: String
+    let brewersTips: String
+    let food: String
+    let abv: Double
+    let ibu: Double
+    let srm: Double
 }
 
 extension Beer {
     func toBeerUI() -> BeerUI {
-        BeerUI(id: id, name: name, description: description, imageUrl: description)
+        BeerUI(id: id, name: name, description: description, imageUrl: imageURL ?? "")
     }
 
     func toBeerUI() -> BeerDetailUI {
-        BeerDetailUI(name: name, description: description, imageUrl: description)
+        BeerDetailUI(
+            name: name,
+            tagline: tagline,
+            firstBrewed: firstBrewed,
+            description: description,
+            imageURL: imageURL ?? "",
+            brewersTips: brewersTips,
+            food: foodPairing.joined(separator: ", "),
+            abv: abv,
+            ibu: ibu ?? -1,
+            srm: srm ?? -1
+        )
     }
 }
 
