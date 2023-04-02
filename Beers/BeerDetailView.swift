@@ -36,11 +36,10 @@ struct BeerDetailView: View {
 
             GridRow {
                 Text(beer.name)
-
                 Text(beer.name)
-
                 Text(beer.name)
             }
+            //.font(.body.width(.compressed))
 
             GridRow {
                 Text(beer.description)

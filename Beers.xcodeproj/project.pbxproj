@@ -38,6 +38,7 @@
 		8E59ACE129D5FED700B39AC5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59ACE029D5FED700B39AC5 /* MainView.swift */; };
 		8E59ACE329D5FED900B39AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E59ACE229D5FED900B39AC5 /* Assets.xcassets */; };
 		8E59ACE629D5FED900B39AC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E59ACE529D5FED900B39AC5 /* Preview Assets.xcassets */; };
+		8EE34BE829D9E25D0063FD11 /* BeerShape+Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE34BE729D9E25D0063FD11 /* BeerShape+Shape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		8E59ACE029D5FED700B39AC5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		8E59ACE229D5FED900B39AC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E59ACE529D5FED900B39AC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8EE34BE729D9E25D0063FD11 /* BeerShape+Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeerShape+Shape.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				8E50074A29D998B30061B8E1 /* Btn */,
 				8E50074D29D998EB0061B8E1 /* View+Extensions.swift */,
 				8E50074F29D999620061B8E1 /* Color+Extensions.swift */,
+				8EE34BE729D9E25D0063FD11 /* BeerShape+Shape.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EE34BE829D9E25D0063FD11 /* BeerShape+Shape.swift in Sources */,
 				8E50073E29D9734E0061B8E1 /* NetworkService.swift in Sources */,
 				8E59ACE129D5FED700B39AC5 /* MainView.swift in Sources */,
 				8E50074C29D998C60061B8E1 /* MainButton+Extensions.swift in Sources */,

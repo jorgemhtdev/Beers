@@ -21,10 +21,19 @@ struct LoginView: View {
         NavigationStack {
             VStack(spacing: 30) {
 
-                Image(systemName: "wineglass")
-                    .font(.system(size: 120))
-                    .padding(.vertical)
-                    .foregroundColor(Color.orangeXA)
+                BeerShape()
+                    .stroke()
+                    .frame(width: 175, height: 175)
+                    .foregroundStyle(
+                        LinearGradient(gradient:
+                                        Gradient(
+                                            colors: [.orangeXA, .orangeStrongXA]),
+                                       startPoint: .topLeading,
+                                       endPoint: .bottomTrailing
+                                      )
+                    )
+                    .cornerRadius(10)
+                    .padding(.top)
 
                 Spacer()
 
@@ -74,3 +83,4 @@ struct LoginView_Previews: PreviewProvider {
         LoginView()
     }
 }
+
