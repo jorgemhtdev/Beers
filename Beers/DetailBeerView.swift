@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct DetailBeerView: View {
+
+    let beer:BeerDetailUI
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        BeerDetailView(beer: beer)
     }
 }
 
 struct DetailBeerView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailBeerView()
+        DetailBeerView(beer: BeerDetailFake)
     }
 }

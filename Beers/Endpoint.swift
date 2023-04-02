@@ -7,8 +7,11 @@
 
 import Foundation
 
-struct Endpoint {
-    static let baseURL = "https://api.punkapi.com/v2"
-    static let beers = "/beers"
-    static let random = "/beers/random"
+private let baseURL = "https://api.punkapi.com/v2"
+
+var host = baseURL
+
+struct EndPoint {
+    static let beers =  URL(string: "\(host)/beers")!
+    static let random = URL(string: "\(host)/beers/random")!
 }

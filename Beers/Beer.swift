@@ -17,7 +17,7 @@ struct Beer: Decodable {
     let tagline: String
     let firstBrewed: String
     let description: String
-    let imageUrl: String?
+    let imageURL: String
     let abv: Double
     let ibu: Double?
     let targetFg: Double
@@ -36,13 +36,16 @@ struct Beer: Decodable {
 
     // La mayoría de veces cuando llamamos a un endpoint la key del JSON no coincide con el nombre de la propiedad de nuestro objeto de dominio. Al implementar CodingKeys hacemos ese mapeo del JSON al nombre de la propiedad.
     enum CodingKeys: String, CodingKey {
-        case id, name, tagline, description, abv, ibu, ebc, srm, ph, volume, method, ingredients, foodPairing, brewersTips, contributedBy
+        case id, name, tagline, description, abv, ibu, ebc, srm, ph, volume, method, ingredients
         case firstBrewed = "first_brewed"
-        case imageUrl = "image_url"
+        case imageURL = "image_url"
         case targetFg = "target_fg"
         case targetOg = "target_og"
         case attenuationLevel = "attenuation_level"
         case boilVolume = "boil_volume"
+        case foodPairing = "food_pairing"
+        case brewersTips = "brewers_tips"
+        case contributedBy = "contributed_by"
     }
 }
 
@@ -50,9 +53,22 @@ struct BeerUI : Hashable, Identifiable {
     let id: Int
     let name: String
     let description: String
-    let imageUrl: String?
+    let imageUrl: String
+}
+
+struct BeerDetailUI {
+    let name: String
+    let description: String
+    let imageUrl: String
 }
 
 extension Beer {
+    func toBeerUI() -> BeerUI {
+        BeerUI(id: id, name: name, description: description, imageUrl: description)
+    }
 
+    func toBeerUI() -> BeerDetailUI {
+        BeerDetailUI(name: name, description: description, imageUrl: description)
+    }
 }
+

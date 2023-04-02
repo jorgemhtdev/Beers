@@ -21,29 +21,43 @@ struct MainView: View {
 
         NavigationStack {
             VStack {
-
                 List(viewModel.beers) { beer in
                     NavigationLink(beer.name) {
                         Text(beer.name)
                     }
                 }
 
-                Button("Random Beer") {
+                Button(action: {
                     showSheet.toggle()
+                }) {
+                    Text("Random Beer")
                 }
-                .padding(.top, 32)
+                .frame(height: 40)
+                .frame(maxWidth: .infinity)
+                .foregroundColor(.white)
+                .background(
+                    .indigo,
+                    in: RoundedRectangle(
+                        cornerRadius: 10,
+                        style: .continuous //https://medium.com/fueled-engineering/continuous-rounded-corners-with-uikit-b575d50ab232
+                    )
+                )
+                .padding(.horizontal)
             }
-            .navigationTitle("Beers")
+            .navigationTitle("My Favorite Beer")
             .navigationDestination(for: BeerUI.self) { beer in
                 Text(beer.name)
             }
             .padding()
             .sheet(isPresented: $showSheet) {
-                Text("Random Beer")
+                RandomBeerView()
             }
             .navigationTitle("Beers")
             .navigationBarTitleDisplayMode(.large)
             .navigationBarBackButtonHidden(true)
+            .onAppear {
+                viewModel.fetchData()
+            }
         }
 
     }
@@ -55,8 +69,6 @@ struct MainView_Previews: PreviewProvider {
         MainView(viewModel: .loadList)
     }
 }
-
-
 
 // @StateObject var viewModel: MainVM
 

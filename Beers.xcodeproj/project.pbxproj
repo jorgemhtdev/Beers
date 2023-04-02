@@ -26,6 +26,10 @@
 		8E50073829D81B150061B8E1 /* DetailBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50073729D81B150061B8E1 /* DetailBeerView.swift */; };
 		8E50073A29D81B240061B8E1 /* DetailBeerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50073929D81B240061B8E1 /* DetailBeerVM.swift */; };
 		8E50073C29D825AD0061B8E1 /* Read.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50073B29D825AD0061B8E1 /* Read.swift */; };
+		8E50073E29D9734E0061B8E1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50073D29D9734E0061B8E1 /* NetworkService.swift */; };
+		8E50074129D97B4A0061B8E1 /* RandomBeerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50074029D97B4A0061B8E1 /* RandomBeerVM.swift */; };
+		8E50074329D97C970061B8E1 /* RandomBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50074229D97C970061B8E1 /* RandomBeerView.swift */; };
+		8E50074629D980D70061B8E1 /* BeerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50074529D980D70061B8E1 /* BeerDetailView.swift */; };
 		8E59ACDF29D5FED700B39AC5 /* BeersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59ACDE29D5FED700B39AC5 /* BeersApp.swift */; };
 		8E59ACE129D5FED700B39AC5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59ACE029D5FED700B39AC5 /* MainView.swift */; };
 		8E59ACE329D5FED900B39AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E59ACE229D5FED900B39AC5 /* Assets.xcassets */; };
@@ -52,6 +56,10 @@
 		8E50073729D81B150061B8E1 /* DetailBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBeerView.swift; sourceTree = "<group>"; };
 		8E50073929D81B240061B8E1 /* DetailBeerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBeerVM.swift; sourceTree = "<group>"; };
 		8E50073B29D825AD0061B8E1 /* Read.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Read.swift; sourceTree = "<group>"; };
+		8E50073D29D9734E0061B8E1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		8E50074029D97B4A0061B8E1 /* RandomBeerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerVM.swift; sourceTree = "<group>"; };
+		8E50074229D97C970061B8E1 /* RandomBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerView.swift; sourceTree = "<group>"; };
+		8E50074529D980D70061B8E1 /* BeerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailView.swift; sourceTree = "<group>"; };
 		8E59ACDB29D5FED700B39AC5 /* Beers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E59ACDE29D5FED700B39AC5 /* BeersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersApp.swift; sourceTree = "<group>"; };
 		8E59ACE029D5FED700B39AC5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -74,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				8E50072829D750E50061B8E1 /* Endpoint.swift */,
+				8E50073D29D9734E0061B8E1 /* NetworkService.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -115,6 +124,23 @@
 			name = DetailBeer;
 			sourceTree = "<group>";
 		};
+		8E50073F29D97B340061B8E1 /* RandomBeer */ = {
+			isa = PBXGroup;
+			children = (
+				8E50074229D97C970061B8E1 /* RandomBeerView.swift */,
+				8E50074029D97B4A0061B8E1 /* RandomBeerVM.swift */,
+			);
+			name = RandomBeer;
+			sourceTree = "<group>";
+		};
+		8E50074429D97F5D0061B8E1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8E50074529D980D70061B8E1 /* BeerDetailView.swift */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
 		8E59ACD229D5FED700B39AC5 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				8E59ACED29D6008A00B39AC5 /* Features */,
+				8E50074429D97F5D0061B8E1 /* Components */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -159,6 +186,7 @@
 				8E50073129D81ADC0061B8E1 /* Login */,
 				8E50073029D7A2AF0061B8E1 /* Main */,
 				8E50073629D81B000061B8E1 /* DetailBeer */,
+				8E50073F29D97B340061B8E1 /* RandomBeer */,
 			);
 			name = Features;
 			sourceTree = "<group>";
@@ -274,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E50073E29D9734E0061B8E1 /* NetworkService.swift in Sources */,
 				8E59ACE129D5FED700B39AC5 /* MainView.swift in Sources */,
 				8E50073C29D825AD0061B8E1 /* Read.swift in Sources */,
 				8E50072629D74E670061B8E1 /* Amount.swift in Sources */,
@@ -282,6 +311,7 @@
 				8E50071C29D74E3F0061B8E1 /* Temp.swift in Sources */,
 				8E50073829D81B150061B8E1 /* DetailBeerView.swift in Sources */,
 				8E50072229D74E560061B8E1 /* Malt.swift in Sources */,
+				8E50074629D980D70061B8E1 /* BeerDetailView.swift in Sources */,
 				8E50071629D74E250061B8E1 /* BoilVolume.swift in Sources */,
 				8E59ACDF29D5FED700B39AC5 /* BeersApp.swift in Sources */,
 				8E50072F29D7A2AA0061B8E1 /* MainVM.swift in Sources */,
@@ -290,8 +320,10 @@
 				8E50071A29D74E380061B8E1 /* MashTemp.swift in Sources */,
 				8E50073A29D81B240061B8E1 /* DetailBeerVM.swift in Sources */,
 				8E50073529D81AF90061B8E1 /* LoginView.swift in Sources */,
+				8E50074329D97C970061B8E1 /* RandomBeerView.swift in Sources */,
 				8E50072029D74E4E0061B8E1 /* Ingredients.swift in Sources */,
 				8E50071E29D74E480061B8E1 /* Fermentation.swift in Sources */,
+				8E50074129D97B4A0061B8E1 /* RandomBeerVM.swift in Sources */,
 				8E50072D29D7951E0061B8E1 /* FakeBeer.swift in Sources */,
 				8E50072429D74E5F0061B8E1 /* Hop.swift in Sources */,
 				8E50073329D81AF00061B8E1 /* LoginVM.swift in Sources */,

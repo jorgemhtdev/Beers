@@ -19,7 +19,6 @@ private let beerData: [BeerUI] = [
     BeerUI(id: 9, name: "AB:07", description: "Whisky cask-aged imperial scotch ale. Beer perfect for when the rain is coming sideways. Liquorice, plum and raisin temper the warming alcohol, producing a beer capable of holding back the Scottish chill.", imageUrl: "https://images.punkapi.com/v2/")
 ]
 
-
 extension MainVM {
     static let loadList: MainVM = {
         let viewModel = MainVM()
@@ -28,3 +27,5 @@ extension MainVM {
         return viewModel
     }()
 }
+
+let BeerDetailFake = BeerDetailUI(name: "AB:07", description: "Whisky cask-aged imperial scotch ale. Beer perfect for when the rain is coming sideways. Liquorice, plum and raisin temper the warming alcohol, producing a beer capable of holding back the Scottish chill.", imageUrl: "https://images.punkapi.com/v2/")
