@@ -20,6 +20,7 @@ struct RandomBeerView: View {
     var body: some View {
         VStack {
             BeerDetailView(beer: viewModel.beer)
+                .padding()
         }
         .onAppear {
             viewModel.fetchData()

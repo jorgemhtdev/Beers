@@ -16,7 +16,7 @@ private let beerData: [BeerUI] = [
     BeerUI(id: 6, name: "Electric India", description: "Re-brewed as a spring seasonal, this beer – which appeared originally as an Equity Punk shareholder creation – retains its trademark spicy, fruity edge. A perfect blend of Belgian Saison and US IPA, crushed peppercorns and heather honey are also added to produce a genuinely unique beer.", imageUrl: "https://images.punkapi.com/v2/6.png"),
     BeerUI(id: 7, name: "Test Beer", description: "This is a test beer description.", imageUrl: "https://example.com/test.png"),
     BeerUI(id: 8, name: "Fake Lager", description: "Fake is the new black. Fake is where it is at. Fake Art, fake brands, fake breasts, and fake lager. We want to play our part in the ugly fallout from the Lager Dream. Say hello to Fake Lager – a zesty, floral 21st century faux masterpiece with added BrewDog bitterness.", imageUrl: "https://images.punkapi.com/v2/8.png"),
-    BeerUI(id: 9, name: "AB:07", description: "Whisky cask-aged imperial scotch ale. Beer perfect for when the rain is coming sideways. Liquorice, plum and raisin temper the warming alcohol, producing a beer capable of holding back the Scottish chill.", imageUrl: "https://images.punkapi.com/v2/")
+    BeerUI(id: 9, name: "AB:07", description: "Whisky cask-aged imperial scotch ale. Beer perfect for when the rain is coming sideways. Liquorice, plum and raisin temper the warming alcohol, producing a beer capable of holding back the Scottish chill.", imageUrl: "https://images.punkapi.com/v2/9.png")
 ]
 
 extension MainVM {
@@ -28,4 +28,4 @@ extension MainVM {
     }()
 }
 
-let BeerDetailFake = BeerDetailUI(name: "AB:07", description: "Whisky cask-aged imperial scotch ale. Beer perfect for when the rain is coming sideways. Liquorice, plum and raisin temper the warming alcohol, producing a beer capable of holding back the Scottish chill.", imageUrl: "https://images.punkapi.com/v2/")
+let BeerDetailFake = BeerDetailUI(name: "AB:07", description: "Whisky cask-aged imperial scotch ale. Beer perfect for when the rain is coming sideways. Liquorice, plum and raisin temper the warming alcohol, producing a beer capable of holding back the Scottish chill.", imageUrl: "https://images.punkapi.com/v2/9.png")

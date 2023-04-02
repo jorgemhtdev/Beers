@@ -13,6 +13,7 @@ struct DetailBeerView: View {
 
     var body: some View {
         BeerDetailView(beer: beer)
+            .padding()
     }
 }
 
